@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myCarApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS | Controller</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="cars">
+		Select a car:
+		<button ng-click="sedan()">Sedan</button>
+		<button ng-click="suv()">SUV</button>
+		<button ng-click="hatchback()">Hatchback</button>
+		<button ng-click="convertible()">Convertible</button>
+		
+		<p>You have selected : {{myFavCar}} </p>
+	
+	</div>
+
+	<script>
+		var app = angular.module("myCarApp", []);
+		app.controller('cars', function($scope){
+			$scope.myFavCar = 'None';
+
+			$scope.sedan = function(){
+				$scope.myFavCar = 'Sedan';
+			};
+			$scope.suv = function(){
+				$scope.myFavCar = 'SUV';
+			};
+			$scope.hatchback = function(){
+				$scope.myFavCar = 'Hatchback';
+			};
+			$scope.convertible = function(){
+				$scope.myFavCar = 'Convertible';
+			};
+			
+		});
+	</script>
+</body>
+</html>

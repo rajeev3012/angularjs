@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Input text color change</title>
+	<script src="angular.js"></script>
+	<style>
+		input{
+			width: 200px;
+    		height: 45px;
+    		font-size: 20px;
+    		text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div ng-app="" ng-init="myCol='Red'">
+		<input style="background-color:{{myCol}}" ng-model="myCol" value="myCol" type="text">
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS | Invoice</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<fieldset ng-init="qty=1; cost=2">
+		<legend><strong>Invoice</strong></legend>
+		
+			<label>Quantity: <br/>
+				<input type="number" min="0" ng-model="qty">
+			</label> <br> <br>
+		
+			<label>Cost: <br/>
+				<input type="number" min="0" ng-model="cost">
+			</label> <br>
+		
+			<br/>
+			<div><strong>Total:</strong> {{ qty * cost | currency : "Rs. " : 2}}</div>
+		
+	</fieldset>
+
+</body>
+</html>
